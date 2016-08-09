@@ -24,8 +24,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:recyclerview-v7:24.1.1'
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.jakewharton:butterknife:8.2.1'
     compile 'com.hannesdorfmann:adapterdelegates2:2.0.1'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.zhy:okhttputils:2.6.2'
 }
