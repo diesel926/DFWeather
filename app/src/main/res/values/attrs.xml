@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonHeaderView">
+        <attr name="center_title" format="string" /> <!-- 头部中间标题 -->
+        <attr name="left_type" format="enum">
+            <enum name="text" value="0" /> <!-- 通用头部左侧显示类型-仅文本 -->
+            <enum name="text_and_text" value="1" /> <!-- 通用头部左侧显示类型-两个文本 -->
+            <enum name="icon" value="2" /> <!-- 通用头部左侧显示类型-仅图标 -->
+        </attr>
+        <attr name="right_type" format="enum">
+            <enum name="icon" value="0" /> <!-- 通用头部右侧显示类型-仅图标 -->
+            <enum name="icon_and_icon" value="1" /> <!-- 通用头部右侧显示类型- 两个图标 -->
+            <enum name="text" value="2" /> <!-- 通用头部右侧显示类型-仅文本 -->
+            <enum name="icon_and_dot" value="3" /> <!-- 通用头部右侧显示类型-图标和小红点 -->
+            <enum name="text_or_icon" value="4" /> <!-- 通用头部右侧显示类型-文本或者图标 -->
+        </attr>
+    </declare-styleable>
+</resources>

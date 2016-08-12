@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用头部控件ID -->
+    <item name="header_layout" type="id" />
+    <item name="header_left_icon" type="id" />
+    <item name="header_left_title" type="id" />
+    <item name="header_left_sub_title" type="id" />
+    <item name="header_center_title" type="id" />
+    <item name="header_right_icon" type="id" />
+    <item name="header_right_sub_icon" type="id" />
+    <item name="header_right_title" type="id" />
+    <item name="header_right_dot_icon" type="id" />
+</resources>
