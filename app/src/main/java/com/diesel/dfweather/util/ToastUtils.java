@@ -8,14 +8,14 @@ import com.diesel.dfweather.DFApplication;
 /**
  * Comments：
  *
- * @author wangj
+ * @author Diesel
  *
  *         Time: 2016/8/9
  *
  *         Modified By:
  *         Modified Date:
  *         Why & What is modified:
- * @version 5.0.0
+ * @version 1.0.0
  */
 public class ToastUtils {
 

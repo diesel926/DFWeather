@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Comments：
  *
- * @author wangj
+ * @author Diesel
  *
  *         Time: 2016/8/9
  *

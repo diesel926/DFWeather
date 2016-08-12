@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Comments：字符串相关的工具类
  *
- * @author wangj
+ * @author Diesel
  *
  *         Time: 2016/8/9
  *
