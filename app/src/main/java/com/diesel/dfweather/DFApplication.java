@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
+import com.diesel.dfweather.common.Drawables;
+import com.diesel.dfweather.util.CrashHandler;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.cookie.CookieJarImpl;
 import com.zhy.http.okhttp.cookie.store.PersistentCookieStore;
@@ -47,7 +50,10 @@ public class DFApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        CrashHandler.getInstance().init(this);
         initOkHttp();
+        Fresco.initialize(this);
+        Drawables.init(getResources());
     }
 
     private void initOkHttp() {
