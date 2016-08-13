@@ -1,4 +1,4 @@
-package com.diesel.dfweather;
+package com.diesel.dfweather.base;
 
 import android.content.Context;
 import android.support.multidex.MultiDex;

@@ -3,7 +3,7 @@ package com.diesel.dfweather.util;
 import android.support.annotation.StringRes;
 import android.widget.Toast;
 
-import com.diesel.dfweather.DFApplication;
+import com.diesel.dfweather.base.DFApplication;
 
 /**
  * Comments：
