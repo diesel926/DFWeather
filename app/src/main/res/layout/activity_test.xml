@@ -5,10 +5,55 @@
     android:layout_height="match_parent"
     tools:context="com.diesel.dfweather.TestActivity">
 
-    <Button
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/show_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa33aaaa">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="myGroup"
+            android:text="My Group" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/hide_content_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="myGroup"
-        android:text="My Group" />
+        android:layout_below="@id/show_content_layout"
+        android:layout_marginTop="-100dp"
+        android:background="#11aa3311"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/bg_activity"
+            android:text="asasasas" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/bg_common_header"
+            android:text="asasasas" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/colorAccent"
+            android:text="asasasas" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>
