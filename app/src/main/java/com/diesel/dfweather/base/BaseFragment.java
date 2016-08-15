@@ -1,6 +1,8 @@
 package com.diesel.dfweather.base;
 
+import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 
 /**
  * Comments：
@@ -14,4 +16,11 @@ import android.app.Fragment;
  */
 public class BaseFragment extends Fragment {
 
+    protected Activity mActivity;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mActivity = getActivity();
+    }
 }

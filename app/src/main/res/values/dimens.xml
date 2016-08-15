@@ -3,6 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="top_header_height">@dimen/px100</dimen>
+
     <dimen name="px1">0.5dp</dimen>
     <dimen name="px2">1.0dp</dimen>
     <dimen name="px3">1.5dp</dimen>
@@ -505,4 +507,5 @@
     <dimen name="px500">250.0dp</dimen>
     <dimen name="px538">269.0dp</dimen>
     <dimen name="px660">330.0dp</dimen>
+
 </resources>
