@@ -1,8 +1,8 @@
 package com.diesel.dfweather.base;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
+import android.support.v4.app.Fragment;
 
 /**
  * Comments：

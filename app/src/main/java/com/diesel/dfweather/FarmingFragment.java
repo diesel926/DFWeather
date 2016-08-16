@@ -1,6 +1,9 @@
 package com.diesel.dfweather;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +17,9 @@ import com.diesel.dfweather.widget.TitleRefreshView;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Comments：农事
  *
@@ -26,14 +32,59 @@ import java.util.Map;
  */
 public class FarmingFragment extends BaseFragment {
 
+    @BindView(R.id.weather_pager)
+    ViewPager mWeatherPager;
+
     /**
      * 缓存城市天气页面View，其中key值为城市名
      */
     private Map<String, RefreshScrollView> mViewMap = new HashMap<>();
 
+    private WeatherPagerAdapter mAdapter;
+
     public static FarmingFragment newInstance() {
         return new FarmingFragment();
     }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_farming, null);
+        ButterKnife.bind(this, view);
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mAdapter = new WeatherPagerAdapter();
+        mWeatherPager.setAdapter(mAdapter);
+        mWeatherPager.addOnPageChangeListener(mPageChangeListener);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mWeatherPager.removeOnPageChangeListener(mPageChangeListener);
+    }
+
+    private ViewPager.OnPageChangeListener mPageChangeListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 
     private RefreshScrollView createPageView() {
         LayoutInflater mInflater = mActivity.getLayoutInflater();
@@ -66,7 +117,7 @@ public class FarmingFragment extends BaseFragment {
 
         @Override
         public int getCount() {
-            return 0;
+            return 3;
         }
 
         @Override
@@ -83,12 +134,14 @@ public class FarmingFragment extends BaseFragment {
         public Object instantiateItem(ViewGroup container, int position) {
             final String cityName = null;
             RefreshScrollView pageView = null;
-            if (mViewMap.containsKey(cityName)) {
-                pageView = mViewMap.get(cityName);
-            } else {
-                pageView = createPageView();
-                mViewMap.put(cityName, pageView);
-            }
+//            if (mViewMap.containsKey(cityName)) {
+//                pageView = mViewMap.get(cityName);
+//            } else {
+//                pageView = createPageView();
+//                mViewMap.put(cityName, pageView);
+//            }
+            // FIXME: 正式接入数据时删除
+            pageView = createPageView();
             container.addView(pageView);
             final ContentScrollView contentScrollView = pageView.getScrollView();
             contentScrollView.post(new Runnable() {
